@@ -1,0 +1,204 @@
+<html lang="en"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><style type="text/css" id="dark-mode-custom-style"></style><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#000000"><meta name="description" itemprop="description" content="Take a self-test and diagnose your symptoms for Covid-19."><meta name="keywords" content=""><meta property="og:title" content="Check your symptoms"><meta property="og:image" content="/img_fb.jpg"><meta property="og:url" content="https://covid.bhaarat.ai/"><meta property="og:description" content="Take a self-test and diagnose your symptoms for Covid-19."><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Check your symptoms"><meta name="twitter:image" content="https://covid.bhaarat.ai/img_fb.jpg"><meta name="twitter:image:alt" content="Symptom Checker"><link rel="manifest" href="/manifest.json"><link rel="shortcut icon" href="/favicon.png"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAThha_7plVIr914fpofcMpA9pQIBqgVr0&amp;libraries=places"></script><title>Symptom Checker</title><link href="/static/css/2.0e1a4c73.chunk.css" rel="stylesheet"><link href="/static/css/main.eb990299.chunk.css" rel="stylesheet"><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/12/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/40/12/util.js"></script><style data-jss="" data-meta="MuiDialog">
+    @media print {
+      .MuiDialog-root {
+        position: absolute !important;
+      }
+    }
+    .MuiDialog-scrollPaper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .MuiDialog-scrollBody {
+      overflow-x: hidden;
+      overflow-y: auto;
+      text-align: center;
+    }
+    .MuiDialog-scrollBody:after {
+      width: 0;
+      height: 100%;
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .MuiDialog-container {
+      height: 100%;
+      outline: 0;
+    }
+    @media print {
+      .MuiDialog-container {
+        height: auto;
+      }
+    }
+    .MuiDialog-paper {
+      margin: 32px;
+      position: relative;
+      overflow-y: auto;
+    }
+    @media print {
+      .MuiDialog-paper {
+        box-shadow: none;
+        overflow-y: visible;
+      }
+    }
+    .MuiDialog-paperScrollPaper {
+      display: flex;
+      max-height: calc(100% - 64px);
+      flex-direction: column;
+    }
+    .MuiDialog-paperScrollBody {
+      display: inline-block;
+      text-align: left;
+      vertical-align: middle;
+    }
+    .MuiDialog-paperWidthFalse {
+      max-width: calc(100% - 64px);
+    }
+    .MuiDialog-paperWidthXs {
+      max-width: 444px;
+    }
+    @media (max-width:507.95px) {
+      .MuiDialog-paperWidthXs.MuiDialog-paperScrollBody {
+        max-width: calc(100% - 64px);
+      }
+    }
+    .MuiDialog-paperWidthSm {
+      max-width: 600px;
+    }
+    @media (max-width:663.95px) {
+      .MuiDialog-paperWidthSm.MuiDialog-paperScrollBody {
+        max-width: calc(100% - 64px);
+      }
+    }
+    .MuiDialog-paperWidthMd {
+      max-width: 960px;
+    }
+    @media (max-width:1023.95px) {
+      .MuiDialog-paperWidthMd.MuiDialog-paperScrollBody {
+        max-width: calc(100% - 64px);
+      }
+    }
+    .MuiDialog-paperWidthLg {
+      max-width: 1280px;
+    }
+    @media (max-width:1343.95px) {
+      .MuiDialog-paperWidthLg.MuiDialog-paperScrollBody {
+        max-width: calc(100% - 64px);
+      }
+    }
+    .MuiDialog-paperWidthXl {
+      max-width: 1920px;
+    }
+    @media (max-width:1983.95px) {
+      .MuiDialog-paperWidthXl.MuiDialog-paperScrollBody {
+        max-width: calc(100% - 64px);
+      }
+    }
+    .MuiDialog-paperFullWidth {
+      width: calc(100% - 64px);
+    }
+    .MuiDialog-paperFullScreen {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      max-width: 100%;
+      max-height: none;
+      border-radius: 0;
+    }
+    .MuiDialog-paperFullScreen.MuiDialog-paperScrollBody {
+      margin: 0;
+      max-width: 100%;
+    }
+    </style><style data-jss="" data-meta="MuiSnackbar">
+    .MuiSnackbar-root {
+      left: 8px;
+      right: 8px;
+      display: flex;
+      z-index: 1400;
+      position: fixed;
+      align-items: center;
+      justify-content: center;
+    }
+    .MuiSnackbar-anchorOriginTopCenter {
+      top: 8px;
+    }
+    @media (min-width:600px) {
+      .MuiSnackbar-anchorOriginTopCenter {
+        top: 24px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+      }
+    }
+    .MuiSnackbar-anchorOriginBottomCenter {
+      bottom: 8px;
+    }
+    @media (min-width:600px) {
+      .MuiSnackbar-anchorOriginBottomCenter {
+        left: 50%;
+        right: auto;
+        bottom: 24px;
+        transform: translateX(-50%);
+      }
+    }
+    .MuiSnackbar-anchorOriginTopRight {
+      top: 8px;
+      justify-content: flex-end;
+    }
+    @media (min-width:600px) {
+      .MuiSnackbar-anchorOriginTopRight {
+        top: 24px;
+        left: auto;
+        right: 24px;
+      }
+    }
+    .MuiSnackbar-anchorOriginBottomRight {
+      bottom: 8px;
+      justify-content: flex-end;
+    }
+    @media (min-width:600px) {
+      .MuiSnackbar-anchorOriginBottomRight {
+        left: auto;
+        right: 24px;
+        bottom: 24px;
+      }
+    }
+    .MuiSnackbar-anchorOriginTopLeft {
+      top: 8px;
+      justify-content: flex-start;
+    }
+    @media (min-width:600px) {
+      .MuiSnackbar-anchorOriginTopLeft {
+        top: 24px;
+        left: 24px;
+        right: auto;
+      }
+    }
+    .MuiSnackbar-anchorOriginBottomLeft {
+      bottom: 8px;
+      justify-content: flex-start;
+    }
+    @media (min-width:600px) {
+      .MuiSnackbar-anchorOriginBottomLeft {
+        left: 24px;
+        right: auto;
+        bottom: 24px;
+      }
+    }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <style>
+    button{
+        width: 100% !important;
+        text-align: left !important;
+        font-size: 16px !important;
+        font-family: Roboto !important;
+    }
+    body {
+        background: #fff;
+        font-family: Roboto !important;
+    }
+    </style>
+    </head>
+    <body data-gr-c-s-loaded="true" height="100%"><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"><div style="height: 97vh; background-color: #fff; margin:10px"><div></div><div style="transform: none; transform-origin: 0% 0% 0px;"><div class="component"><div class="Helpline_container__1GOlN"><div style="font-size: 2.25em; font-family: Roboto; color: rgb(0, 0, 0); margin-bottom: 8px; text-align:center;">Indian Helpline:</div><div style="font-size: 0.875em; font-family: Roboto; color: rgb(125, 125, 125); margin-bottom: 8px;">Indian government and Ministry of Health &amp; Family Welfare has provided the following helpline numbers of States.<div class="[object Object]">Source: <a href="https://www.mohfw.gov.in/" style="color: rgb(33, 71, 150);">https://www.mohfw.gov.in/</a></div></div><div class="list-group" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.25em; margin-bottom: 1em; margin-top: 1.25em;"><div><button id="1" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">National Helpline Number:</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">1075</div></div></div></button></div><div><button id="2" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Central Helpline Number:</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">+91-11-23978043</div></div></div></button></div><div><button id="3" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">MyGov WhatsApp Number:</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">+91-90131-51515</div></div></div></button></div><div><button id="4" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Central Helpline Email:</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">ncov2019@gmail.com</div></div></div></button></div></div><div style="font-size: 0.875em; font-family: Roboto; color: rgb(125, 125, 125); margin-bottom: 8px;">States helpline number</div><div class="list-group" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.25em; margin-bottom: 1em; margin-top: 1.25em;"><div><button id="1" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Andhra Pradesh</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">0866-2410978</div></div></div></button></div><div><button id="2" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Arunachal Pradesh</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">9436055743</div></div></div></button></div><div><button id="3" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Assam</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">6913347770</div></div></div></button></div><div><button id="4" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Bihar</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">104</div></div></div></button></div><div><button id="5" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Chhattisgarh</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">077122-35091</div></div></div></button></div><div><button id="6" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Goa</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">104</div></div></div></button></div><div><button id="7" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Gujarat</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">104</div></div></div></button></div><div><button id="8" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Haryana</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">8558893911</div></div></div></button></div><div><button id="9" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Himachal Pradesh</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">104</div></div></div></button></div><div><button id="10" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Jharkhand</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">104</div></div></div></button></div><div><button id="11" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Karnataka</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">104</div></div></div></button></div><div><button id="12" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Kerala</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">0471-2552056</div></div></div></button></div><div><button id="13" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Madhya Pradesh</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">0755-2527177</div></div></div></button></div><div><button id="14" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Maharashtra</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">020-26127394</div></div></div></button></div><div><button id="15" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Manipur</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">3852411668</div></div></div></button></div><div><button id="16" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Meghalaya</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">108</div></div></div></button></div><div><button id="17" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Mizoram</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">102</div></div></div></button></div><div><button id="18" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Nagaland</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">7005539653</div></div></div></button></div><div><button id="19" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Odisha</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">9439994859</div></div></div></button></div><div><button id="20" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Punjab</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">104</div></div></div></button></div><div><button id="21" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Rajasthan</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">0141-2225624</div></div></div></button></div><div><button id="22" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Sikkim</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">104</div></div></div></button></div><div><button id="23" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Tamil Nadu</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">044-29510500</div></div></div></button></div><div><button id="24" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Telangana</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">104</div></div></div></button></div><div><button id="25" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Tripura</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">0381-2315879</div></div></div></button></div><div><button id="26" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Uttarakhand</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">104</div></div></div></button></div><div><button id="27" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Uttar Pradesh</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">18001805145</div></div></div></button></div><div><button id="28" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">West Bengal</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">1800313444222</div></div></div></button></div><div><button id="29" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Andaman and Nicobar Islands</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">03192-232102</div></div></div></button></div><div><button id="30" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Chandigarh</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">9779558282</div></div></div></button></div><div><button id="31" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Dadra and Nagar Haveli and Daman &amp; Diu</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">104</div></div></div></button></div><div><button id="32" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Delhi</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">011-22307145</div></div></div></button></div><div><button id="33" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Jammu &amp; Kashmir</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">1912520982</div></div></div></button></div><div><button id="34" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Ladakh</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">1982256462</div></div></div></button></div><div><button id="35" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Lakshadweep</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">4896263742</div></div></div></button></div><div><button id="36" class="list-group-item list-group-item-light list-group-item-action" style="float: left; margin-bottom: 0.625em; padding: 1em; border: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 0.125em 0.25em; font-size: 1em; font-family: Roboto; color: rgb(0, 0, 0); outline: none;"><div><div style="color: rgb(125, 125, 125); font-size: 0.875em; font-family: Roboto;">Puducherry</div><div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; font-size: 1.25em; font-family: JioType; color: rgb(0, 0, 0);"><div class="column">104</div></div></div></button></div></div></div></div></div></div></div><script>!function(e){function r(r){for(var n,i,p=r[0],l=r[1],a=r[2],c=0,s=[];c<p.length;c++)i=p[c],Object.prototype.hasOwnProperty.call(o,i)&&o[i]&&s.push(o[i][0]),o[i]=0;for(n in l)Object.prototype.hasOwnProperty.call(l,n)&&(e[n]=l[n]);for(f&&f(r);s.length;)s.shift()();return u.push.apply(u,a||[]),t()}function t(){for(var e,r=0;r<u.length;r++){for(var t=u[r],n=!0,p=1;p<t.length;p++){var l=t[p];0!==o[l]&&(n=!1)}n&&(u.splice(r--,1),e=i(i.s=t[0]))}return e}var n={},o={1:0},u=[];function i(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.exports,i),t.l=!0,t.exports}i.m=e,i.c=n,i.d=function(e,r,t){i.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},i.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.t=function(e,r){if(1&r&&(e=i(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(i.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var n in e)i.d(t,n,function(r){return e[r]}.bind(null,n));return t},i.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return i.d(r,"a",r),r},i.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},i.p="/";var p=this["webpackJsonpcovid-app-ui"]=this["webpackJsonpcovid-app-ui"]||[],l=p.push.bind(p);p.push=r,p=p.slice();for(var a=0;a<p.length;a++)r(p[a]);var f=l;t()}([])</script><script src="/static/js/2.fdaa26b6.chunk.js"></script><script src="/static/js/main.0306d718.chunk.js"></script></body></html>
+    
